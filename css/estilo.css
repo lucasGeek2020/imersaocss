@@ -18,6 +18,11 @@ body {
   body {
     font-size: 14px;
   }
+  .site-title {
+    font-size: 4em;
+
+  }
+
 }
 
 /* breakpoint */
@@ -59,18 +64,20 @@ header {
 }
 
 .menu a {
-  
+  color:#12181f;
   display: block;
   padding: 10px 20px;
+  border-bottom: 2px solid white;
 }
 
 a {
-  color: teal;
+
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.menu a:hover {
+  border-bottom: 2px solid #f1c40f;
+  
 }
 
 .site-subtitle, 
