@@ -52,6 +52,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -68,6 +69,12 @@ header {
   display: block;
   padding: 10px 20px;
   border-bottom: 2px solid white;
+  transition: background-color .3s, color .3s;
+}
+
+.menu a:hover{
+  background-color: teal;
+  color: whitesmoke;
 }
 
 a {
@@ -78,6 +85,21 @@ a {
 .menu a:hover {
   border-bottom: 2px solid #f1c40f;
   
+}
+
+.titulo{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: cubic-bezier(0.87, 0.32, 0.39, 0.81) 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+   
+   100%{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+   }
 }
 
 .site-subtitle, 
@@ -99,12 +121,15 @@ a {
  line-height: 1.8em;
 }
 
+
+.contato,
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
   
 }
 
+.contato h2,
 .portfolio h2 {
   font-family: 'Permanent Marker', cursive;
   color: whitesmoke;
@@ -141,4 +166,26 @@ a {
   width: 240px;
   object-fit: cover;
   object-position: left bottom;
+  transition: transform 500ms;
+}
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+
+.contato{
+  background-color:#12181f;
+}
+.contato .icons{
+  text-align: center;
+}
+
+.contato a{
+  color: whitesmoke;
+  font-size: 4em;
+  
+}
+.contato a:active,
+.contato a:hover{
+  border-bottom: none;
+  text-shadow:0px 0px 10px yellow ;
 }
