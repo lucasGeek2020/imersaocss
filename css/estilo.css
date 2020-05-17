@@ -121,14 +121,25 @@ a {
  line-height: 1.8em;
 }
 
-
+.sobre,
 .contato,
 .portfolio {
   padding: 2em;
   min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 
+@media (min-width:1200px){
+.container{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+.sobre,
 .contato h2,
 .portfolio h2 {
   font-family: 'Permanent Marker', cursive;
@@ -137,6 +148,16 @@ a {
   font-size: 2em;
 }
 
+.sobre p{
+  color:white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+.sobre a:hover{
+  background-color: cyan;
+  text-decoration: underline;
+} 
 .portfolio .grid {
   display: grid;
   gap: 2em;
